@@ -1,0 +1,12 @@
+﻿[
+    {
+        "city": "Delhi",
+        "latitude": "30.5",
+        "longitude" : "abc"
+    },
+    {
+        "city": "Delhi",
+        "latitude": "30.5",
+        "longitude": "abc"
+    }
+]

@@ -1,0 +1,374 @@
+[
+    {
+        "city": "Delhi",
+        "temperature": 30.5
+    },
+    {
+        "city": "Mumbai",
+        "temperature": 32.0
+    },
+    {
+        "city": "Chennai",
+        "temperature": 33.2
+    },
+    {
+        "city": "Kolkata",
+        "temperature": 31.8
+    },
+    {
+        "city": "New York",
+        "temperature": 22.5
+    },
+    {
+        "city": "Los Angeles",
+        "temperature": 25.3
+    },
+    {
+        "city": "London",
+        "temperature": 18.0
+    },
+    {
+        "city": "Paris",
+        "temperature": 19.5
+    },
+    {
+        "city": "Tokyo",
+        "temperature": 27.8
+    },
+    {
+        "city": "Beijing",
+        "temperature": 29.0
+    },
+    {
+        "city": "Sydney",
+        "temperature": 24.6
+    },
+    {
+        "city": "Cape Town",
+        "temperature": 20.3
+    },
+    {
+        "city": "Rio de Janeiro",
+        "temperature": 28.1
+    },
+    {
+        "city": "Dubai",
+        "temperature": 38.5
+    },
+    {
+        "city": "Toronto",
+        "temperature": 15.2
+    },
+    {
+        "city": "Mexico City",
+        "temperature": 26.4
+    },
+    {
+        "city": "Berlin",
+        "temperature": 17.8
+    },
+    {
+        "city": "Rome",
+        "temperature": 23.6
+    },
+    {
+        "city": "Moscow",
+        "temperature": 12.7
+    },
+    {
+        "city": "Singapore",
+        "temperature": 31.0
+    },
+    {
+        "city": "Bangkok",
+        "temperature": 33.5
+    },
+    {
+        "city": "Seoul",
+        "temperature": 21.9
+    },
+    {
+        "city": "Madrid",
+        "temperature": 25.0
+    },
+    {
+        "city": "Istanbul",
+        "temperature": 22.3
+    },
+    {
+        "city": "Hong Kong",
+        "temperature": 30.0
+    },
+    {
+        "city": "Jakarta",
+        "temperature": 32.7
+    },
+    {
+        "city": "Athens",
+        "temperature": 28.2
+    },
+    {
+        "city": "Nairobi",
+        "temperature": 20.8
+    },
+    {
+        "city": "Cairo",
+        "temperature": 35.1
+    },
+    {
+        "city": "Buenos Aires",
+        "temperature": 26.7
+    },
+    {
+        "city": "Hanoi",
+        "temperature": 29.4
+    },
+    {
+        "city": "Bogotá",
+        "temperature": 19.8
+    },
+    {
+        "city": "Sao Paulo",
+        "temperature": 27.2
+    },
+    {
+        "city": "Lisbon",
+        "temperature": 23.5
+    },
+    {
+        "city": "Stockholm",
+        "temperature": 16.3
+    },
+    {
+        "city": "Oslo",
+        "temperature": 14.1
+    },
+    {
+        "city": "Helsinki",
+        "temperature": 11.7
+    },
+    {
+        "city": "Vienna",
+        "temperature": 19.6
+    },
+    {
+        "city": "Amsterdam",
+        "temperature": 18.9
+    },
+    {
+        "city": "Warsaw",
+        "temperature": 15.8
+    },
+    {
+        "city": "Brussels",
+        "temperature": 17.3
+    },
+    {
+        "city": "Geneva",
+        "temperature": 20.4
+    },
+    {
+        "city": "Zurich",
+        "temperature": 19.0
+    },
+    {
+        "city": "Dublin",
+        "temperature": 16.5
+    },
+    {
+        "city": "Edinburgh",
+        "temperature": 14.9
+    },
+    {
+        "city": "Prague",
+        "temperature": 21.2
+    },
+    {
+        "city": "San Francisco",
+        "temperature": 18.7
+    },
+    {
+        "city": "Seattle",
+        "temperature": 17.2
+    },
+    {
+        "city": "Chicago",
+        "temperature": 21.5
+    },
+    {
+        "city": "Houston",
+        "temperature": 29.8
+    },
+    {
+        "city": "Dallas",
+        "temperature": 28.0
+    },
+    {
+        "city": "Phoenix",
+        "temperature": 35.0
+    },
+    {
+        "city": "Las Vegas",
+        "temperature": 37.2
+    },
+    {
+        "city": "Atlanta",
+        "temperature": 26.1
+    },
+    {
+        "city": "Miami",
+        "temperature": 30.6
+    },
+    {
+        "city": "Boston",
+        "temperature": 20.9
+    },
+    {
+        "city": "Denver",
+        "temperature": 22.1
+    },
+    {
+        "city": "Salt Lake City",
+        "temperature": 23.0
+    },
+    {
+        "city": "Minneapolis",
+        "temperature": 19.4
+    },
+    {
+        "city": "Detroit",
+        "temperature": 20.3
+    },
+    {
+        "city": "Philadelphia",
+        "temperature": 22.6
+    },
+    {
+        "city": "Charlotte",
+        "temperature": 24.7
+    },
+    {
+        "city": "San Diego",
+        "temperature": 24.0
+    },
+    {
+        "city": "Anchorage",
+        "temperature": 10.2
+    },
+    {
+        "city": "Honolulu",
+        "temperature": 27.5
+    },
+    {
+        "city": "Bangalore",
+        "temperature": 29.3
+    },
+    {
+        "city": "Hyderabad",
+        "temperature": 30.1
+    },
+    {
+        "city": "Ahmedabad",
+        "temperature": 33.0
+    },
+    {
+        "city": "Pune",
+        "temperature": 28.5
+    },
+    {
+        "city": "Jaipur",
+        "temperature": 34.6
+    },
+    {
+        "city": "Surat",
+        "temperature": 31.2
+    },
+    {
+        "city": "Lucknow",
+        "temperature": 27.9
+    },
+    {
+        "city": "Patna",
+        "temperature": 30.8
+    },
+    {
+        "city": "Kanpur",
+        "temperature": 29.0
+    },
+    {
+        "city": "Indore",
+        "temperature": 27.6
+    },
+    {
+        "city": "Nagpur",
+        "temperature": 32.5
+    },
+    {
+        "city": "Thiruvananthapuram",
+        "temperature": 29.7
+    },
+    {
+        "city": "Coimbatore",
+        "temperature": 28.4
+    },
+    {
+        "city": "Guwahati",
+        "temperature": 26.9
+    },
+    {
+        "city": "Vancouver",
+        "temperature": 16.8
+    },
+    {
+        "city": "Montreal",
+        "temperature": 14.2
+    },
+    {
+        "city": "Calgary",
+        "temperature": 12.5
+    },
+    {
+        "city": "Ottawa",
+        "temperature": 15.0
+    },
+    {
+        "city": "Kuala Lumpur",
+        "temperature": 32.1
+    },
+    {
+        "city": "Bangkok",
+        "temperature": 33.8
+    },
+    {
+        "city": "Hanoi",
+        "temperature": 28.4
+    },
+    {
+        "city": "Taipei",
+        "temperature": 26.5
+    },
+    {
+        "city": "Macau",
+        "temperature": 29.2
+    },
+    {
+        "city": "Shenzhen",
+        "temperature": 30.0
+    },
+    {
+        "city": "Busan",
+        "temperature": 23.7
+    },
+    {
+        "city": "Lima",
+        "temperature": 25.3
+    },
+    {
+        "city": "Manila",
+        "temperature": 31.5
+    },
+    {
+        "city": "Yangon",
+        "temperature": 34.0
+    }
+]

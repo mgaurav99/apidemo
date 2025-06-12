@@ -1,0 +1,11 @@
+C:\gaurav\Api\ServiceClients\bin\Debug\net8.0\ServiceClients.deps.json
+C:\gaurav\Api\ServiceClients\bin\Debug\net8.0\ServiceClients.dll
+C:\gaurav\Api\ServiceClients\bin\Debug\net8.0\ServiceClients.pdb
+C:\gaurav\Api\ServiceClients\obj\Debug\net8.0\ServiceClients.GeneratedMSBuildEditorConfig.editorconfig
+C:\gaurav\Api\ServiceClients\obj\Debug\net8.0\ServiceClients.AssemblyInfoInputs.cache
+C:\gaurav\Api\ServiceClients\obj\Debug\net8.0\ServiceClients.AssemblyInfo.cs
+C:\gaurav\Api\ServiceClients\obj\Debug\net8.0\ServiceClients.csproj.CoreCompileInputs.cache
+C:\gaurav\Api\ServiceClients\obj\Debug\net8.0\ServiceClients.dll
+C:\gaurav\Api\ServiceClients\obj\Debug\net8.0\refint\ServiceClients.dll
+C:\gaurav\Api\ServiceClients\obj\Debug\net8.0\ServiceClients.pdb
+C:\gaurav\Api\ServiceClients\obj\Debug\net8.0\ref\ServiceClients.dll
