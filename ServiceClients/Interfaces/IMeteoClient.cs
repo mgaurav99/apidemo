@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ServiceClients.Models.Meteo;
 
 namespace ServiceClients.Interfaces
 {
@@ -12,11 +13,7 @@ namespace ServiceClients.Interfaces
     /// </summary>
     public interface IMeteoClient
     {
-        /// <summary>
-        /// Get temperature of a city based on city name
-        /// </summary>
-        /// <param name="city"></param>
-        /// <returns></returns>
-        public Task<string> GetTemperatureByCity(string city);
+        public Task<Coordinates>GetCoordinatesByCity(string city);
+        public Task<string> GetTemperatureByCoordinates(Coordinates cordinates);
     }
 }

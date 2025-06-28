@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ServiceClients.Interfaces;
+using ServiceClients.Models.Meteo;
 using WeatherApiService.Models;
 
 namespace WeatherApiService.Controllers
@@ -24,7 +25,7 @@ namespace WeatherApiService.Controllers
         {
             _meteoClient = meteoClient;
         }
-
+        [Obsolete]
         [Authorize]
         /// <summary>
         /// Provides city temperature value based on name of city
@@ -55,21 +56,50 @@ namespace WeatherApiService.Controllers
         }
 
         /// <summary>
-        /// Provides city temperature value based on name of city from meteo api
+        /// Provides city coordinates value based on name of city from meteo api
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>
-        [HttpPost("getcitymeteo")]
-        public async Task<IActionResult> GetCityTemperatureMeteo([FromBody] CityTemperatureRequest req)
+        [HttpPost("getcoordinate")]
+        public async Task<IActionResult> GetCoordinatesByCity([FromBody] CityTemperatureRequest req)
         {
-            string temp = await _meteoClient.GetTemperatureByCity(req.CityName);
-            if(temp=="" || temp == null)
+            if (string.IsNullOrWhiteSpace(req?.CityName))
             {
-                return StatusCode(500, "Some error occured");
+                return BadRequest("City name is required.");
+            }
+            var  coordinates = await _meteoClient.GetCoordinatesByCity(req.CityName);
+            if (string.IsNullOrWhiteSpace(coordinates?.latitude) || string.IsNullOrWhiteSpace(coordinates?.longitude))
+            {
+                return StatusCode(502, "Failed to fetch coordinates from external service.");
+            }
+           
+            else
+            {
+                return Ok(coordinates);
+            }
+        }
+
+        /// <summary>
+        /// Provides temperature of city using coordinates of that city
+        /// </summary>
+        /// <param name="coordinates"></param>
+        /// <returns></returns>
+        [HttpPost("gettemperature")]
+        public async Task<IActionResult>GetCityTemperatureByCoordinates([FromBody] Coordinates coordinates)
+        {
+            if(string.IsNullOrEmpty(coordinates?.latitude) || string.IsNullOrEmpty(coordinates?.longitude))
+            {
+                return BadRequest("Longitude and latitude are required.");
+            }
+
+            string temperature = await _meteoClient.GetTemperatureByCoordinates(coordinates);
+            if(string.IsNullOrEmpty(temperature))
+            {
+                return StatusCode(502, "Failed to fetch temperature from external service");
             }
             else
             {
-                return Ok(temp);
+                return Ok(temperature);
             }
         }
     }

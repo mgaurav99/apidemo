@@ -3,7 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using ServiceClients;
 using ServiceClients.Interfaces;
 using System.Text;
-using WeatherApiService.Services;
+
 
 using WeatherApiService.Utilities;
 
@@ -46,19 +46,21 @@ builder.Services.AddSwaggerGen(c =>
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddHttpClient<MeteoClient>();
-builder.Services.AddSingleton<IMeteoClient, MeteoClient>();
+
+var geoUrl = builder.Configuration["OpenMeteo:GeocodingApiUrl"]
+    ?? throw new Exception("Missing OpenMeteo:GeocodingApiUrl");
+builder.Services.AddHttpClient<IMeteoClient, MeteoClient>(client =>
+{
+    client.BaseAddress = new Uri(geoUrl);
+});
+
+builder.Services.AddSingleton<IJsonSerializer, SystemTextJsonSerializer>();
 
 //builder.Services.AddHttpClient<TokenClient>();
 //builder.Services.AddSingleton<ITokenClient, TokenClient>();
 
-
-
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]);
-
-
-
 
 builder.Services.AddAuthentication(options =>
 {
@@ -79,10 +81,7 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-builder.Services.AddSingleton<JwtTokenService>();
-
-
-
+//builder.Services.AddSingleton<JwtTokenService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
