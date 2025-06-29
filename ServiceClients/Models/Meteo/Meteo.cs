@@ -18,7 +18,7 @@ namespace ServiceClients.Models.Meteo
         public List<MeteoResult> Results { get; set; }
     }
 
-    public class CurrentWeather
+    public class    CurrentWeather
     {
         public double temperature { get; set; }  
     }

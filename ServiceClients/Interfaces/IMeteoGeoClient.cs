@@ -8,11 +8,11 @@ using ServiceClients.Models.Meteo;
 namespace ServiceClients.Interfaces
 {
     /// <summary>
-    /// IMeteoClient
-    /// Defines a contract to get data from meteo api
+    /// IMeteoGeoClient
+    /// Defines a contract to get data from meteo geoencoding api
     /// </summary>
-    public interface IMeteoClient
+    public interface IMeteoGeoClient
     {
-        public Task<string> GetTemperatureByCoordinates(Coordinates cordinates);
+        public Task<Coordinates> GetCoordinatesByCity(string city);
     }
 }

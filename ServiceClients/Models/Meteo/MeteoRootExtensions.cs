@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace ServiceClients.Models.Meteo
 {
+    /// <summary>
+    /// MeteoRootExtensions
+    /// Contains extension methods for MeteoRoot class
+    /// </summary>
     public static class MeteoRootExtensions
     {
+        /// <summary>
+        /// Returns coordinates from MeteoRoot object
+        /// </summary>
+        /// <param name="meteoRoot"></param>
+        /// <returns></returns>
         public static Coordinates ToCoordinates(this MeteoRoot meteoRoot)
         {
             if (meteoRoot?.Results == null || !meteoRoot.Results.Any())

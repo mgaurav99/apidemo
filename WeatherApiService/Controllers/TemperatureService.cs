@@ -18,12 +18,14 @@ namespace WeatherApiService.Controllers
     public class TemperatureServiceController : ControllerBase
     {
         readonly IMeteoClient _meteoClient;
+        readonly IMeteoGeoClient _meteoGeoClient;
         /// <summary>
         /// Constructor
         /// </summary>
-        public TemperatureServiceController(IMeteoClient meteoClient) 
+        public TemperatureServiceController(IMeteoClient meteoClient, IMeteoGeoClient meteoGeoClient) 
         {
             _meteoClient = meteoClient;
+            _meteoGeoClient = meteoGeoClient;
         }
         [Obsolete]
         [Authorize]
@@ -67,7 +69,7 @@ namespace WeatherApiService.Controllers
             {
                 return BadRequest("City name is required.");
             }
-            var  coordinates = await _meteoClient.GetCoordinatesByCity(req.CityName);
+            var  coordinates = await _meteoGeoClient.GetCoordinatesByCity(req.CityName);
             if (string.IsNullOrWhiteSpace(coordinates?.latitude) || string.IsNullOrWhiteSpace(coordinates?.longitude))
             {
                 return StatusCode(502, "Failed to fetch coordinates from external service.");

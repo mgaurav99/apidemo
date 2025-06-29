@@ -49,10 +49,21 @@ builder.Services.AddEndpointsApiExplorer();
 
 var geoUrl = builder.Configuration["OpenMeteo:GeocodingApiUrl"]
     ?? throw new Exception("Missing OpenMeteo:GeocodingApiUrl");
+
+var meteoUrl = builder.Configuration["OpenMeteo:MeteoApiUrl"]
+    ?? throw new Exception("Missing OpenMeteo:MeteoApiUrl");
+
 builder.Services.AddHttpClient<IMeteoClient, MeteoClient>(client =>
+{
+    client.BaseAddress = new Uri(meteoUrl);
+});
+
+builder.Services.AddHttpClient<IMeteoGeoClient, MeteoGeoClient>(client =>
 {
     client.BaseAddress = new Uri(geoUrl);
 });
+
+
 
 builder.Services.AddSingleton<IJsonSerializer, SystemTextJsonSerializer>();
 
